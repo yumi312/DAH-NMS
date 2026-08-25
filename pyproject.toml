@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dahnms"
+version = "0.1.0"
+description = "Density-Aware Hybrid NMS for instance segmentation"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Yi-Chen Wu" }]
+dependencies = [
+  "torch>=2.0",
+  "torchvision>=0.15",
+  "numpy",
+]
+
+[project.optional-dependencies]
+ultralytics = ["ultralytics>=8.3.0"]
+mmdet = ["mmdet>=3.0"]
+
+[tool.setuptools.packages.find]
+include = ["dahnms*"]
